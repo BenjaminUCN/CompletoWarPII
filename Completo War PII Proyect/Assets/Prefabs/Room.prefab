@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
+  clear: 0
 --- !u!1001 &5097161261275433205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,6 +96,18 @@ PrefabInstance:
     - target: {fileID: 451268051893491644, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 713728809135855691, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: defaultColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 713728809135855691, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: defaultColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 713728809135855691, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: defaultColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7206592757117631822, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_Name

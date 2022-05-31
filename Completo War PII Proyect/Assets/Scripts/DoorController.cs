@@ -4,36 +4,32 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public bool Horizontal;
-    public bool Vertical;
-
-    public float crossingDistance = 100f;
-
     public Color defaultColor;
+    //17:09
+
+    public bool horizontal;
+
+    public Color openColor;
+    public Color closeColor;
+
+    //referencia a la puerta
+    public GameObject door;
+
+    private Animator animator;
 
     void Start(){
         defaultColor = gameObject.GetComponent<SpriteRenderer>().color;
+
+        animator = door.GetComponent<Animator>();
     }
 
+    //Activación de la puerta
     private void OnTriggerEnter2D(Collider2D other) {
         RoomController room = this.gameObject.transform.parent.gameObject.GetComponent<RoomController>();
 
+        //Si es el jugador quien la activó y la room no ha sido limpiada
         if(other.gameObject.name == "Player" && !room.clear){
-            Transform playerTransform = other.gameObject.GetComponent<Transform>();
-            Vector3 direction = new Vector3();
-
-            if(Horizontal){
-                direction = new Vector3(transform.position.x - playerTransform.position.x, 0.0f, 0.0f);
-            }
-
-            if(Vertical){
-                direction = new Vector3(0.0f, transform.position.y - playerTransform.position.y, 0.0f);
-            }
-            direction = direction.normalized;
-
-            playerTransform.position += direction * crossingDistance;
-
-            
+            //Cierra todas las puertas de la room
             room.CloseDoors();
         }
         
@@ -41,18 +37,32 @@ public class DoorController : MonoBehaviour
     }
 
     public void Open(){
-        Collider2D col = gameObject.GetComponent<Collider2D>();
+        Collider2D col = door.GetComponent<Collider2D>();
         col.isTrigger = true;
 
         //cambia color puerta abierta
-        gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+        door.GetComponent<SpriteRenderer>().color = openColor;
+
+        if(horizontal){
+            animator.Play("doorHorizontalOpen");
+        }else{
+            //animator.Play("doorVerticalOpen");
+        }
+        
     }
 
     public void Close(){
-        Collider2D col = gameObject.GetComponent<Collider2D>();
+        Collider2D col = door.GetComponent<Collider2D>();
         col.isTrigger = false;
 
         //cambia color puerta cerrada
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.30196078f, 0.30196078f);
+        door.GetComponent<SpriteRenderer>().color = closeColor;
+
+        if(horizontal){
+            animator.Play("doorHorizontalClosing");
+        }else{
+            animator.Play("doorVerticalClosing");
+        }
+        
     }
 }
