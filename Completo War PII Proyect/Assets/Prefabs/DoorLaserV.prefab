@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2397119703916433790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5172343928309909110, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Name
+      value: Door Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605504759731438360, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Size.y
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605504759731438360, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612356597808269104, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1161093194331701848, guid: 2997b4cb79517e248ba66d9037638dd0, type: 3}
+    - target: {fileID: 5612356597808269104, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612356597808269104, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612356597808269104, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+--- !u!1 &7386920220566804232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5172343928309909110, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+  m_PrefabInstance: {fileID: 2397119703916433790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1522715530355837252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386920220566804232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc2059872623fef499b5fddd19aa73aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

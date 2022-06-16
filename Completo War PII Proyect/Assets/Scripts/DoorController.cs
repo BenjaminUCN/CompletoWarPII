@@ -41,12 +41,12 @@ public class DoorController : MonoBehaviour
         col.isTrigger = true;
 
         //cambia color puerta abierta
-        door.GetComponent<SpriteRenderer>().color = openColor;
+        //door.GetComponent<SpriteRenderer>().color = openColor;
 
         if(horizontal){
-            animator.Play("doorHorizontalOpen");
+            animator.Play("doorLaserHOpening");
         }else{
-            //animator.Play("doorVerticalOpen");
+            animator.Play("doorLaserVOpening");
         }
         
     }
@@ -56,12 +56,12 @@ public class DoorController : MonoBehaviour
         col.isTrigger = false;
 
         //cambia color puerta cerrada
-        door.GetComponent<SpriteRenderer>().color = closeColor;
+        //door.GetComponent<SpriteRenderer>().color = closeColor;
 
         if(horizontal){
-            animator.Play("doorHorizontalClosing");
+            animator.Play("doorLaserHClosing");
         }else{
-            animator.Play("doorVerticalClosing");
+            animator.Play("doorLaserVClosing");
         }
         
     }

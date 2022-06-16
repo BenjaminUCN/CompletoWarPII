@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: doorVerticalClosing
+  m_Name: doorLaserHOpen
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5794618569394786732, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - time: 0.016666668
-      value: {fileID: 8428107811553608320, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - time: 0.033333335
-      value: {fileID: -5190240035361007285, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - time: 0.05
-      value: {fileID: -8907790476093091429, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - time: 0.06666667
-      value: {fileID: -2034969255658493214, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
+      value: {fileID: -6176740362399696320, guid: 60bbe4451211c3e49bc0bfef443b8698, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,17 +40,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5794618569394786732, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - {fileID: 8428107811553608320, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - {fileID: -5190240035361007285, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - {fileID: -8907790476093091429, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
-    - {fileID: -2034969255658493214, guid: a1bf9c8d303ad4c4891862bd19d4edfe, type: 3}
+    - {fileID: -6176740362399696320, guid: 60bbe4451211c3e49bc0bfef443b8698, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.083333336
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
