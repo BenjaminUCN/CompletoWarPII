@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 32f;
     public Vector2 movement = new Vector2(0,0);
+    public bool isTemporal = true;
     public float lifeSpan = 8f;
     public float damage;
 
@@ -22,14 +23,18 @@ public class BulletController : MonoBehaviour
     
     void Update()
     {
-        rb.velocity = new Vector2(movement.x*speed, movement.y*speed);
-        lifeSpan -= Time.deltaTime;
-        if(lifeSpan <= 0.0f){
-            Destroy(gameObject);
+        
+        if(isTemporal){
+            rb.velocity = new Vector2(movement.x*speed, movement.y*speed);
+            lifeSpan -= Time.deltaTime;
+            if(lifeSpan <= 0.0f){
+                Destroy(gameObject);
+            }
         }
+        
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         Debug.Log(other.gameObject.tag);
         if(other.gameObject.name.Substring(0,4) == "Wall"){
             Destroy(gameObject);
@@ -44,8 +49,10 @@ public class BulletController : MonoBehaviour
             if(other.gameObject.TryGetComponent<PlayerController>(out PlayerController player)){
                     player.takeDamage(damage);
                 } 
-
-            Destroy(gameObject);
+            if(isTemporal){
+                Destroy(gameObject);
+            }
+            
         }
             
         

@@ -125,6 +125,12 @@ MonoBehaviour:
   attackDamage: 1
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 0, g: 0, b: 0, a: 0}
+  playerType: 
+  keyShoot: space
+  keyLeft: a
+  keyRight: d
+  keyUp: w
+  keyDown: s
   skin: CJ
   currentState: 
   direction: {x: 0, y: -1}
@@ -186,7 +192,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ecd66c12d620dfd43b69b0c4fdeb0cb1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bfc30eaa05b9ad84f822d92178eeb525, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -15,6 +15,15 @@ public class PlayerController : Entity
     private SpriteRenderer sprite;
 
     [Space]
+    [Header("Keys:")]
+    public string playerType = "";
+    public string keyShoot = "space";
+    public string keyLeft = "a";
+    public string keyRight = "d";
+    public string keyUp = "w";
+    public string keyDown = "s";
+
+    [Space]
     [Header("Animation:")]
     public string skin = "";
     //Animation States
@@ -53,15 +62,15 @@ public class PlayerController : Entity
     void Update()
     {
         //get the Input from Horizontal axis
-        hInput = Input.GetAxis("Horizontal");
+        hInput = Input.GetAxis("Horizontal"+playerType);
         //get the Input from Vertical axis
-        vInput = Input.GetAxis("Vertical");
+        vInput = Input.GetAxis("Vertical"+playerType);
 
         HandleSpritesAndAnimation();
         
         Move();
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(keyShoot)){
             //TODO shoot
             
             GameObject b;
@@ -87,18 +96,18 @@ public class PlayerController : Entity
     }
 
     void HandleSpritesAndAnimation(){
-        if(Input.GetKeyDown(KeyCode.A)){
+        if(Input.GetKeyDown(keyLeft)){
             sprite.flipX = false;
             direction = Vector2.left;
         }
-        if(Input.GetKeyDown(KeyCode.D)){
+        if(Input.GetKeyDown(keyRight)){
             sprite.flipX = true;
             direction = Vector2.right;
         }
-        if(Input.GetKeyDown(KeyCode.W)){
+        if(Input.GetKeyDown(keyUp)){
             direction = Vector2.up;
         }
-        if(Input.GetKeyDown(KeyCode.S)){
+        if(Input.GetKeyDown(keyDown)){
             direction = Vector2.down;
         }
 
@@ -123,23 +132,6 @@ public class PlayerController : Entity
         if(Input.GetKeyDown(KeyCode.V)){
             skin = "";
         }
-
-        if (vInput!=0){
-            //animator.SetBool("down",true);
-        }else{
-            //animator.SetBool("down",false);
-        }
-
-        /*if(hInput!=0){
-            if(hInput<0){
-                sprite.flipX = false;
-            }else{
-                sprite.flipX = true;
-            }
-        }else{ 
-            //animator.SetBool("horizontal",false);
-        }*/
-
 
         if(direction.y != 0){
             sprite.flipX = false;
