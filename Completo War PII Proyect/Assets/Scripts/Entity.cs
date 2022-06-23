@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class Entity: MonoBehaviour
 {
     [Header("Entity:")]

@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e9d298b39dd7f42a6b03e517e1b613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 6
+  hp: 1
   maxHp: 6
   moveSpeed: 32
   attackDamage: 1
@@ -94,7 +94,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7695787888419048100, guid: 5da66d72eea3ced49811c845bf16ace0, type: 3}
   firePoint: {fileID: 7198670261431696087}
   defeatedPrefab: {fileID: 9068975508778818128, guid: 4c1350e93176bde40bddd5e41a636150, type: 3}
-  shootsPerAttack: 1
+  shootsPerAttack: 2
+  shootTime: 0.3
+  bulletSpeed: 70
   shootCoolDown: 5
   attackReady: 1
   distance: 0
@@ -210,7 +212,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5c9178267cbae4f4f975f5c5f8ab95db, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2b686639e9f4ea145a7765d3c6d5c534, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

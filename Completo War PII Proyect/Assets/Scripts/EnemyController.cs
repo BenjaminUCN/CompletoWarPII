@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class EnemyController : Entity
 {
     private Animator animator;
@@ -33,7 +35,7 @@ public class EnemyController : Entity
     public bool attackReady = true;
     
     [Space]
-    
+    [Header("AI:")]
     public float distance;
     public float sightDistance = 100f;
     public float minimumFollowDistance = 64f;

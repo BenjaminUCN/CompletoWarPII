@@ -36,7 +36,7 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         Debug.Log(other.gameObject.tag);
-        if(other.gameObject.name.Substring(0,4) == "Wall"){
+        if(other.gameObject.tag == "Wall"){
             Destroy(gameObject);
         }else if(other.gameObject.tag == targetName){
             //target = enemy

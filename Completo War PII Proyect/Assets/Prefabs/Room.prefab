@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.09803922
       objectReference: {fileID: 0}
+    - target: {fileID: 1058497810145988267, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7206592757117631822, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_Name
       value: Door

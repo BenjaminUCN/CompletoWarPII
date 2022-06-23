@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5172343928309909110, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_Name
-      value: Door Variant
+      value: DoorLaserH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172343928309909110, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5605504759731438360, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_Size.x

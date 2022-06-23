@@ -136,7 +136,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,12 +191,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -729,6 +749,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 260197167}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 158185066}
@@ -882,7 +906,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6f396d3ea738be74f89154ff95f657f8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7218e9e13b9ff6748a36d6b926cf41c4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.434
   m_Pitch: 1
@@ -1134,6 +1158,18 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.924316
       objectReference: {fileID: 0}
@@ -1174,12 +1210,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -1380,6 +1424,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 961865240}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 158185066}
@@ -1449,6 +1497,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 961865240}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1533,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225331, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: keyShoot
-      value: enter
+      value: return
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225331, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: moveSpeed
@@ -1739,7 +1791,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1782,12 +1846,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -1855,6 +1927,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 260197167}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1990,7 +2066,7 @@ GameObject:
   - component: {fileID: 781070842}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49245,7 +49321,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49288,12 +49376,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -49626,7 +49722,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49669,12 +49777,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -49863,7 +49979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_LocalScale.x
@@ -50154,6 +50270,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 176
       objectReference: {fileID: 0}
+    - target: {fileID: 5191606999127918174, guid: f8da655ea896f9442bbb4ad00144c4b7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5398350585634505817, guid: f8da655ea896f9442bbb4ad00144c4b7, type: 3}
       propertyPath: clear
       value: 1
@@ -50321,6 +50441,10 @@ PrefabInstance:
       propertyPath: horizontal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1058497810145988267, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3547154922591221436, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -50386,6 +50510,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 260197167}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
@@ -50661,7 +50789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1533840738
 Rigidbody2D:
@@ -50881,6 +51009,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 961865240}
     - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
+      propertyPath: bulletSpeed
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006820506340662357, guid: f61bfc575187a6b439551cd9a56a659e, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 158185066}
@@ -50959,7 +51091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1685819770 stripped
 GameObject:
@@ -51195,7 +51327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6987792470833570281, guid: 96c39c2457a878c46a4f8d618fc6f4be, type: 3}
       propertyPath: m_LocalScale.x
@@ -51369,7 +51501,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51412,12 +51556,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -51496,6 +51648,10 @@ PrefabInstance:
       propertyPath: Horizontal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1058497810145988267, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3547154922591221436, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -51523,7 +51679,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51566,12 +51734,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: enemyType
       value: EnemyGallina
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: playerTransform
@@ -51816,6 +51992,18 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691992, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -89.7
       objectReference: {fileID: 0}
@@ -51856,6 +52044,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: room
       value: 
       objectReference: {fileID: 690988267}
@@ -51864,8 +52056,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: moveSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: shootTime
-      value: 0.1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: sightDistance
@@ -51877,7 +52077,7 @@ PrefabInstance:
       objectReference: {fileID: 158185066}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: shootsPerAttack
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7198670261505691993, guid: a45da9097e8df1348b1161b46b9212c9, type: 3}
       propertyPath: minimumFollowDistance
