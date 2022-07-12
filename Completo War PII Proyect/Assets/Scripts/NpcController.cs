@@ -13,6 +13,8 @@ public class NpcController : MonoBehaviour
     public KeyCode actionA = KeyCode.Z;
 
     private bool isNearPlayer;
+    private bool isTalking;
+
 
     void Start()
     {
@@ -23,8 +25,13 @@ public class NpcController : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(actionA) && isNearPlayer){
-            trigger.TriggerDialogue();
-        } 
+            if(!isTalking){
+                isTalking = true;
+                trigger.TriggerDialogue();
+            }else{
+                isTalking = FindObjectOfType<DialogueManager>().DisplayNextSentence();
+            }   
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
