@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 6
   maxHp: 6
-  moveSpeed: 80
+  moveSpeed: 120
   attackDamage: 1
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 0, g: 0, b: 0, a: 0}
