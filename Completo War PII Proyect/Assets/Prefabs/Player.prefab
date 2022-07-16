@@ -126,11 +126,11 @@ MonoBehaviour:
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 0, g: 0, b: 0, a: 0}
   playerType: 
-  keyShoot: space
-  keyLeft: a
-  keyRight: d
-  keyUp: w
-  keyDown: s
+  keyShoot: 32
+  keyLeft: 97
+  keyRight: 100
+  keyUp: 119
+  keyDown: 115
   skin: CJ
   currentState: 
   direction: {x: 0, y: -1}

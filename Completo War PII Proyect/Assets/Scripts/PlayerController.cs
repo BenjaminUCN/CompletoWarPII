@@ -17,11 +17,11 @@ public class PlayerController : Entity
     [Space]
     [Header("Keys:")]
     public string playerType = "";
-    public string keyShoot = "space";
-    public string keyLeft = "a";
-    public string keyRight = "d";
-    public string keyUp = "w";
-    public string keyDown = "s";
+    public KeyCode keyShoot = KeyCode.Space;
+    public KeyCode keyLeft = KeyCode.A;
+    public KeyCode keyRight = KeyCode.D;
+    public KeyCode keyUp = KeyCode.W;
+    public KeyCode keyDown = KeyCode.S;
 
     [Space]
     [Header("Animation:")]

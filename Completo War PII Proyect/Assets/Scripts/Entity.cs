@@ -15,7 +15,7 @@ public class Entity: MonoBehaviour
     public float attackDamage = 1f;
 
     public Color defaultColor;
-    public Color hurtColor;
+    public Color hurtColor = new Color(1f, 0.30196078f, 0.30196078f);
     bool isHitted = false;
 
     //bool invulnerable = false;
@@ -25,7 +25,7 @@ public class Entity: MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         if(!isHitted){
             hp -= damage;
-            StartCoroutine(SwitchHurtColor());
+            StartCoroutine(Invulnerability());
         }
         
         if(hp <= 0.0f){
@@ -33,16 +33,21 @@ public class Entity: MonoBehaviour
         }
     }
 
-    IEnumerator SwitchHurtColor(){
+    IEnumerator Invulnerability(){
         isHitted = true;
-        defaultColor = gameObject.GetComponent<SpriteRenderer>().color;
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.30196078f, 0.30196078f);
-        yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
-        yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.30196078f, 0.30196078f);
-        yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = defaultColor;
+
+        SpriteRenderer sp = GetComponent<SpriteRenderer>();
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
+
+        defaultColor = sp.color;
+        sp.color = new Color(1f, 0.30196078f, 0.30196078f);
+        yield return wait;
+        sp.color = defaultColor;
+        yield return wait;
+        sp.color = new Color(1f, 0.30196078f, 0.30196078f);
+        yield return wait;
+        sp.color = defaultColor;
+        
         isHitted = false;
     }
 
