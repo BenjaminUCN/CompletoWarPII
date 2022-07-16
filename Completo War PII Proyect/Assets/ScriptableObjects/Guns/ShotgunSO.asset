@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ShotgunSO
   m_EditorClassIdentifier: 
   attackDamage: 20
-  bulletSpeed: 400
+  bulletSpeed: 32
   sprite: {fileID: 21300000, guid: 8efa42d29cdf7fa42ade942cbb4a9dbd, type: 3}
   firePointPosition: {x: -64, y: 2, z: 0}

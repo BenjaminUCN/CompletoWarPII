@@ -18,6 +18,7 @@ public class EnemyScript : Entity
         enemyMovement = GetComponent<EnemyMovement>();
         enemyAttack = GetComponent<EnemyAttack>();
 
+        SetTarget(FindClosestPlayer().transform);
         enemyMovement.Initialize(moveSpeed);
         enemyAttack.Initialize();
     }

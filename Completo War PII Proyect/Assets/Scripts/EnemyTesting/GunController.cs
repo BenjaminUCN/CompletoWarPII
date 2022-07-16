@@ -20,6 +20,9 @@ public class GunController : MonoBehaviour
     private float attackDamage = 0f;
     private float bulletSpeed = 1f;
 
+    [SerializeField] private int bulletsPerShoot = 3; //Bullets created in 1 shot
+    [SerializeField] private float bulletsAngle = 5f; //Angle between the bullets
+
     [SerializeField] private KeyCode actionA = KeyCode.Z;
 
     void Start(){
@@ -41,7 +44,7 @@ public class GunController : MonoBehaviour
         TurnDirection();
 
         if(Input.GetKeyDown(actionA)){
-            Shoot();
+            Shoot2(bulletsPerShoot, bulletsAngle);
         }
 
     }
@@ -66,6 +69,51 @@ public class GunController : MonoBehaviour
         Debug.Log(bulletSpeed);
         b.GetComponent<BulletController>().speed = bulletSpeed;
         b.GetComponent<BulletController>().movement = direction;
+        b.GetComponent<BulletController>().damage = attackDamage;
+        b.GetComponent<AudioSource>().Play();
+    }
+
+    public void Shoot2(int n, float angle){
+        float x = target.position.x - transform.position.x; 
+        float y = target.position.y - transform.position.y;
+        Vector2 direction = new Vector2(x,y).normalized;
+
+        float rad = Mathf.Atan2(y, x);
+        angle = angle * Mathf.Deg2Rad;
+
+        float offset = 0f;
+        if(n%2==0){
+            offset = angle/2;
+            n = (n-2)/2;
+
+            //Create first 2 bullets
+            direction = new Vector2(Mathf.Cos(rad+offset), Mathf.Sin(rad+offset));
+            CreateBullet(direction, rad+offset);
+            direction = new Vector2(Mathf.Cos(rad-offset), Mathf.Sin(rad-offset));
+            CreateBullet(direction, rad-offset);
+        }else{
+            //Create first Bullet
+            CreateBullet(direction, rad);
+            n = (n-1)/2;
+        }
+
+        //Create the rest of the bullets in pairs
+        for(int i=1;i<=n;i++){
+                direction = new Vector2(Mathf.Cos(rad+(i*angle)+offset), Mathf.Sin(rad+(i*angle)+offset));
+                CreateBullet(direction, rad+(i*angle)+offset);
+                direction = new Vector2(Mathf.Cos(rad-(i*angle)-offset), Mathf.Sin(rad-(i*angle)-offset));
+                CreateBullet(direction, rad-(i*angle)-offset);
+            }
+        
+    }
+
+    public void CreateBullet(Vector2 dir, float angle){
+        GameObject b = Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
+        b.transform.eulerAngles = new Vector3(0.0f,0.0f,angle* Mathf.Rad2Deg -180f);
+        b.GetComponent<BulletController>().targetName = "Player";
+        Debug.Log(bulletSpeed);
+        b.GetComponent<BulletController>().speed = bulletSpeed;
+        b.GetComponent<BulletController>().movement = dir;
         b.GetComponent<BulletController>().damage = attackDamage;
         b.GetComponent<AudioSource>().Play();
     }
