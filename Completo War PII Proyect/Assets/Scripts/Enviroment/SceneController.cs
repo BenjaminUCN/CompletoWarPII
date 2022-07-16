@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
-{
+{   
+
+    
+
     public void ChangeScene(string skin){
         StaticValuesController.skin = skin;
         SceneManager.LoadScene("testLevel0");
