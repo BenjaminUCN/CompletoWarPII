@@ -10,7 +10,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private Transform target;
 
     [Header("Attack:")]
-    [SerializeField] private ScriptableObject attackData;
+    [SerializeField] private AttackScriptableObject attackData;
 
     //public float attackDamage = 1f;
     //public float bulletSpeed = 70f;
@@ -23,15 +23,36 @@ public class EnemyAttack : MonoBehaviour
 
     private WaitForSeconds shootCadency, shootCoolDown;
 
+    private bool attackEnabled = true;
 
     public void Initialize(){
+        GetSetAttackData();
+
         shootCadency = new WaitForSeconds(cadencyTime);
         shootCoolDown = new WaitForSeconds(coolDownTime);
+    }
+
+    void Update(){
+        SetTarget(FindClosestPlayer().transform);
+        if(attackEnabled){
+            Attack();
+        }
+    }
+
+    public void SetAttackEnabled(bool enable){
+        attackEnabled = enable;
     }
 
     public void SetTarget(Transform target){
         this.target = target;
         Gun.GetComponent<GunController>().SetTarget(target);
+    }
+
+    public void GetSetAttackData(){
+        this.attackRange = attackData.attackRange;
+        this.shootsPerAttack = attackData.shootsPerAttack;
+        this.cadencyTime = attackData.cadencyTime;
+        this.coolDownTime = attackData.coolDownTime;
     }
 
     public void Attack(){
@@ -55,5 +76,25 @@ public class EnemyAttack : MonoBehaviour
         }
         yield return shootCoolDown;
         attackReady = true;
+    }
+
+    public GameObject FindClosestPlayer()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Player");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
     }
 }

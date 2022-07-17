@@ -23,15 +23,29 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float minimumFollowDistance = 64f;
     [SerializeField] private float minimumRetreatDistance = 0f;
 
-    public void Initialize(float moveSpeed){
+    private bool movementEnabled = true;
+
+    public void Initialize(){
         animator = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
 
-        this.moveSpeed = moveSpeed;
+        //this.moveSpeed = moveSpeed;
+        this.moveSpeed = IAData.moveSpeed;
 
         this.sightDistance = IAData.sightDistance;
         this.minimumFollowDistance = IAData.minimumFollowDistance;
         this.minimumRetreatDistance = IAData.minimumRetreatDistance;
+    }
+
+    void Update(){
+        SetTarget(FindClosestPlayer().transform);
+        if(movementEnabled){
+            Move();
+        }
+    }
+
+    public void SetMovementEnabled(bool enable){
+        movementEnabled = enable;
     }
 
     public void SetTarget(Transform target){
@@ -49,11 +63,14 @@ public class EnemyMovement : MonoBehaviour
             moveTo(target.position,-1);
         }else{
             //se queda quieto
+            animator.SetBool("IsMoving", false);
             rb.velocity = new Vector2(0,0);
         }
     }
 
     public void moveTo(Vector2 point,int aproachValue){
+        animator.SetBool("IsMoving", true);
+
         Vector2 moveDirection = new Vector2(point.x -transform.position.x,point.y -transform.position.y); 
         rb.velocity = moveDirection.normalized * moveSpeed * aproachValue;
 
@@ -64,4 +81,23 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    public GameObject FindClosestPlayer()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Player");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
 }

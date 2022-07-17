@@ -16,5 +16,6 @@ public class ItemController : MonoBehaviour
 
     public virtual void GiveItem(GameObject player){
         //give benefit to player
+        //Destroy(gameObject);
     }
 }

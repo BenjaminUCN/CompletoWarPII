@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(EnemyMovement))]
 [RequireComponent(typeof(EnemyAttack))]
@@ -11,33 +12,77 @@ public class EnemyScript : Entity
     [SerializeField] private EnemyAttack enemyAttack;
     [SerializeField] private EnemyMovement enemyMovement;
 
+
+    [SerializeField] private int timesToRepeat = 1;
+    [SerializeField] private float moveTime, attackTime, coolDownTime;
+
+    [Header("Events: ")]
+    [SerializeField] private UnityEvent OnDie;
+    [SerializeField] private UnityEvent OnStart;
+    [SerializeField] private UnityEvent OnMove;
+    [SerializeField] private UnityEvent OnAttack;
+    [SerializeField] private UnityEvent OnRest;
+
     [Header("Die: ")]
     [SerializeField] private GameObject defeatedPrefab;
 
-    void Start(){
-        enemyMovement = GetComponent<EnemyMovement>();
-        enemyAttack = GetComponent<EnemyAttack>();
+    private bool isReady = true;
+    private WaitForSeconds waitMove, waitAttack, waitCoolDown;
 
-        SetTarget(FindClosestPlayer().transform);
-        enemyMovement.Initialize(moveSpeed);
-        enemyAttack.Initialize();
+    void Start(){
+        //enemyMovement = GetComponent<EnemyMovement>();
+        //enemyAttack = GetComponent<EnemyAttack>();
+
+        //SetTarget(FindClosestPlayer().transform);
+        //enemyMovement.Initialize();
+        //enemyAttack.Initialize();
+
+        SetWaits();
+        OnStart?.Invoke();//Para llamar a la room
     }
 
     void Update(){
-        SetTarget(FindClosestPlayer().transform);
+        //SetTarget(FindClosestPlayer().transform);
 
-        enemyMovement.Move();
-        enemyAttack.Attack();
+        //enemyMovement.Move();
+        //enemyAttack.Attack();
+
+        if(isReady){
+            StartCoroutine(Pattern());
+        }
+    }
+
+    IEnumerator Pattern(){
+        isReady = false;
+
+        for(int i=0;i<timesToRepeat;i++){
+            OnMove?.Invoke();
+            yield return waitMove;
+            OnAttack?.Invoke();
+            yield return waitAttack;
+        }
+        OnRest?.Invoke();
+        yield return waitCoolDown;
+
+        isReady = true;
     }
 
     public override void Die(){
         GameObject defeated = Instantiate(defeatedPrefab,transform.position,transform.rotation);
         //room.GetComponent<RoomController>().updateEnemyCount(-1);
+        OnDie?.Invoke();//Para llamar a la room
         base.Die();  
     }
 
     void SetupComponents(){
-        //
+        //posible inicialización del [Required] BoxCollider2D y otros,
+        //para no tener que ajustarlos luego de añadir el script,
+    }
+
+    void SetWaits(){
+        waitMove = new WaitForSeconds(moveTime);
+        waitAttack = new WaitForSeconds(attackTime);
+        waitCoolDown = new WaitForSeconds(coolDownTime);
     }
 
     void SetTarget(Transform target){

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f132415bdce57bd4bb378c4516b646b2, type: 3}
-  m_Name: GunScriptableObject
+  m_Script: {fileID: 11500000, guid: 1215a3d6d36c4334788e5ecbed8d39b0, type: 3}
+  m_Name: JustFollow
   m_EditorClassIdentifier: 
-  attackDamage: 1
-  bulletSpeed: 70
-  sprite: {fileID: 21300000, guid: ebb0bca0c52c0e64e91939486fca5083, type: 3}
-  firePointPosition: {x: -8, y: 2, z: 0}
+  moveSpeed: 120
+  sightDistance: 600
+  minimumFollowDistance: 64
+  minimumRetreatDistance: 32

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f132415bdce57bd4bb378c4516b646b2, type: 3}
-  m_Name: GunScriptableObject
+  m_Script: {fileID: 11500000, guid: 9b337305a7d7925439f114a0ccc73efa, type: 3}
+  m_Name: LongRange
   m_EditorClassIdentifier: 
-  attackDamage: 1
-  bulletSpeed: 70
-  sprite: {fileID: 21300000, guid: ebb0bca0c52c0e64e91939486fca5083, type: 3}
-  firePointPosition: {x: -8, y: 2, z: 0}
+  attackRange: 600
+  shootsPerAttack: 3
+  cadencyTime: 0.3
+  coolDownTime: 0
