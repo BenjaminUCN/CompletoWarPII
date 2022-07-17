@@ -10,9 +10,17 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("testLevel0");
     }
 
+    public void EscenaPersonajes() {
+        SceneManager.LoadScene("Menu");
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu"){
             SceneManager.LoadScene("Menu");
         }    
+        
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "Menu"){
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
