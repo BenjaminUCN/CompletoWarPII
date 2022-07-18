@@ -1180,6 +1180,7 @@ MonoBehaviour:
   slowdownDistance: 64
   speedupDistance: 600
   maxForce: 0.5
+  fleeWeight: 0.5
 --- !u!212 &1031167712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6923,6 +6924,7 @@ MonoBehaviour:
   slowdownDistance: 100
   speedupDistance: 600
   maxForce: 0.5
+  fleeWeight: 0.5
 --- !u!212 &1365158463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7643,6 +7645,7 @@ GameObject:
   - component: {fileID: 2006895030}
   - component: {fileID: 2006895029}
   - component: {fileID: 2006895028}
+  - component: {fileID: 2006895031}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -7662,13 +7665,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254e0b2b5f7d998429bff3419121f542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFollow: {fileID: 0}
+  targetFollow: {fileID: 1145962228}
   targetAvoid: {fileID: 0}
   steeringForces: {x: 0, y: 0}
-  followSpeed: 100
+  followSpeed: 64
   slowdownDistance: 128
   speedupDistance: 600
   maxForce: 0.5
+  fleeWeight: 0.5
 --- !u!212 &2006895029
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7734,6 +7738,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2006895031
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006895027}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &3718878169279632996
 PrefabInstance:
   m_ObjectHideFlags: 0
