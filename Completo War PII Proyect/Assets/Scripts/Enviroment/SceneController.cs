@@ -14,6 +14,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void EscenaOpciones() {
+        SceneManager.LoadScene("Options");
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu"){
             SceneManager.LoadScene("Menu");
