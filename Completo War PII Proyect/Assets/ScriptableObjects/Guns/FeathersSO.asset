@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f132415bdce57bd4bb378c4516b646b2, type: 3}
-  m_Name: RedGunSO
+  m_Name: FeathersSO
   m_EditorClassIdentifier: 
-  attackDamage: 2
+  attackDamage: 1
   bulletSpeed: 120
-  gunSprite: {fileID: 21300000, guid: ebb0bca0c52c0e64e91939486fca5083, type: 3}
-  bulletSprite: {fileID: 21300000, guid: d01f682672da2f44aa83828b4f886df6, type: 3}
-  bulletSound: {fileID: 0}
-  firePointPosition: {x: -16, y: 2, z: 0}
+  gunSprite: {fileID: 0}
+  bulletSprite: {fileID: 21300000, guid: 0de31db730d24e749af8756e0c1c790e, type: 3}
+  bulletSound: {fileID: 8300000, guid: 35c09882e54b38540b7be58b580e94fa, type: 3}
+  firePointPosition: {x: 0, y: 0, z: 0}

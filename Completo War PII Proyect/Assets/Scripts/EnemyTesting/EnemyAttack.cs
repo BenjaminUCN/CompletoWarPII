@@ -26,6 +26,7 @@ public class EnemyAttack : MonoBehaviour
     private bool attackEnabled = true;
 
     public void Initialize(){
+        SetTarget(FindClosestPlayer().transform);
         GetSetAttackData();
 
         shootCadency = new WaitForSeconds(cadencyTime);

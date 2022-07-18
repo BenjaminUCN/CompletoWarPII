@@ -40,13 +40,13 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
         }else if(other.gameObject.tag == targetName){
             //target = enemy
+            if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemy2)){
+                    enemy2.takeDamage(damage);
+                }
             if(other.gameObject.name.Substring(0,5) == "Enemy"){
                 if(other.gameObject.TryGetComponent<EnemyController>(out EnemyController enemy)){
                     enemy.takeDamage(damage);
                 }
-                if(other.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemy2)){
-                    enemy2.takeDamage(damage);
-                } 
             }
             //target = player
             if(other.gameObject.TryGetComponent<PlayerController>(out PlayerController player)){

@@ -24,6 +24,7 @@ public class EnemyScript : Entity
     [SerializeField] private UnityEvent OnRest;
 
     [Header("Die: ")]
+    [SerializeField] private Sprite defeatedSprite;
     [SerializeField] private GameObject defeatedPrefab;
 
     private bool isReady = true;
@@ -69,6 +70,7 @@ public class EnemyScript : Entity
 
     public override void Die(){
         GameObject defeated = Instantiate(defeatedPrefab,transform.position,transform.rotation);
+        defeated.GetComponent<SpriteRenderer>().sprite = defeatedSprite;
         //room.GetComponent<RoomController>().updateEnemyCount(-1);
         OnDie?.Invoke();//Para llamar a la room
         base.Die();  

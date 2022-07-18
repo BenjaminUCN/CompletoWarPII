@@ -34,7 +34,7 @@ public class GunController : MonoBehaviour
         attackDamage = GunData.attackDamage;
         bulletSpeed = GunData.bulletSpeed;
         //sp.sprite = spriteArray[GunData.spriteIndex];
-        sp.sprite = GunData.sprite;
+        sp.sprite = GunData.gunSprite;
         firePoint.localPosition = GunData.firePointPosition;
     }
 
@@ -64,13 +64,16 @@ public class GunController : MonoBehaviour
         float y = target.position.y - transform.position.y;
         Vector2 direction = new Vector2(x,y).normalized;
 
-        GameObject b = Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
+        float rad = Mathf.Atan2(y, x);
+        CreateBullet(direction, rad);
+
+        /*GameObject b = Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
         b.GetComponent<BulletController>().targetName = "Player";
         Debug.Log(bulletSpeed);
         b.GetComponent<BulletController>().speed = bulletSpeed;
         b.GetComponent<BulletController>().movement = direction;
         b.GetComponent<BulletController>().damage = attackDamage;
-        b.GetComponent<AudioSource>().Play();
+        b.GetComponent<AudioSource>().Play();*/
     }
 
     public void Shoot2(int n, float angle){
@@ -110,11 +113,16 @@ public class GunController : MonoBehaviour
     public void CreateBullet(Vector2 dir, float angle){
         GameObject b = Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
         b.transform.eulerAngles = new Vector3(0.0f,0.0f,angle* Mathf.Rad2Deg -180f);
-        b.GetComponent<BulletController>().targetName = "Player";
-        Debug.Log(bulletSpeed);
-        b.GetComponent<BulletController>().speed = bulletSpeed;
-        b.GetComponent<BulletController>().movement = dir;
-        b.GetComponent<BulletController>().damage = attackDamage;
+
+        b.GetComponent<SpriteRenderer>().sprite = GunData.bulletSprite;
+
+        BulletController bc = b.GetComponent<BulletController>();
+        bc.targetName = "Player";
+        bc.damage = attackDamage;
+        bc.speed = bulletSpeed;
+        bc.movement = dir;
+
+        if(GunData.bulletSound != null) b.GetComponent<AudioSource>().clip = GunData.bulletSound;
         b.GetComponent<AudioSource>().Play();
     }
 

@@ -6,12 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: frog
+  m_Name: Gallina
   m_Controller: {fileID: 9100000, guid: d8d4c249e328eed4682335451a71fdd9, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 22948de774861104197433246ccfa715, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 22948de774861104197433246ccfa715, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 700e7cea2c308fc47b9f64976481a432, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 3cb8bf4853fd63c419ded6d9dfb43c72, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b52876919ed61c241b11038e6ebbfcd7, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 9dc3e548266ae7940a6d836f9668d8c1, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 8f8151268e4859147ac6245d89e40ee3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 574a95be1d6c6f54b81de3a03ea39e80, type: 2}

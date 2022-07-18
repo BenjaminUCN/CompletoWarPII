@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d01f682672da2f44aa83828b4f886df6, type: 3}
-  m_Color: {r: 0.60862404, g: 0.7360166, b: 0.9150943, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8586ae72eade9cf4cabab986af85d365, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 70
   movement: {x: 0, y: 0}
+  isTemporal: 1
   lifeSpan: 8
   damage: 0
   shooterName: 
