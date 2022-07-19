@@ -20,14 +20,27 @@ public class MeleeAttack : MonoBehaviour
 
     //public KeyCode actionA = KeyCode.X;
 
+    private float offsetX;
+
     public void Initialize(){
         //GetSetAttackData();
 
         animator = GetComponent<Animator>();
         attackCoolDown = new WaitForSeconds(coolDownTime);
+        offsetX = attackPointOffset.x;
+    }
+
+    public void TurnAttackPointOffset(){
+        if(GetComponent<SpriteRenderer>().flipX == true){
+            attackPointOffset.x = -offsetX;
+        }else{
+            attackPointOffset.x = offsetX;
+        }
+        
     }
 
     void Update(){
+        TurnAttackPointOffset();
         Attack();
     }
 
