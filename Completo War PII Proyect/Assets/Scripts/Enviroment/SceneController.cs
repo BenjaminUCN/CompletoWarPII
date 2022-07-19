@@ -13,9 +13,25 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("testLevel0");
     }
 
+    public void EscenaPersonajes() {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void EscenaOpciones() {
+        SceneManager.LoadScene("Options");
+    }
+
+    public void VolverAMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu"){
             SceneManager.LoadScene("Menu");
         }    
+        
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name == "Menu"){
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
