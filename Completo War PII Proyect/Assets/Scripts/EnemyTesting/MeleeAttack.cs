@@ -17,6 +17,8 @@ public class MeleeAttack : MonoBehaviour
     private bool attackReady = true;
 
     private WaitForSeconds attackCoolDown;
+    
+    [SerializeField] private bool localEnable = true;
 
     //public KeyCode actionA = KeyCode.X;
 
@@ -40,8 +42,10 @@ public class MeleeAttack : MonoBehaviour
     }
 
     void Update(){
-        TurnAttackPointOffset();
-        Attack();
+        if(localEnable){
+            TurnAttackPointOffset();
+            Attack();
+        }
     }
 
     public void Attack(){
@@ -80,5 +84,9 @@ public class MeleeAttack : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(transform.position + attackPointOffset, attackRange);
+    }
+
+    public void SetLocalEnable(bool enable){
+        localEnable = enable;
     }
 }

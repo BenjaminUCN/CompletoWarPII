@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     //Gun reference
-    [SerializeField] private GameObject Gun;
+    [SerializeField] private List<GameObject> Guns;
     //Player reference
     [SerializeField] private Transform target;
 
@@ -23,7 +23,7 @@ public class EnemyAttack : MonoBehaviour
 
     private WaitForSeconds shootCadency, shootCoolDown;
 
-    private bool attackEnabled = true;
+    [SerializeField]private bool localEnable = true;
 
     public void Initialize(){
         SetTarget(FindClosestPlayer().transform);
@@ -31,22 +31,26 @@ public class EnemyAttack : MonoBehaviour
 
         shootCadency = new WaitForSeconds(cadencyTime);
         shootCoolDown = new WaitForSeconds(coolDownTime);
+
+        foreach (GameObject gun in Guns)
+        {
+         gun.SetActive(localEnable);   
+        }        
     }
 
     void Update(){
-        SetTarget(FindClosestPlayer().transform);
-        if(attackEnabled){
+        if(localEnable){
+            SetTarget(FindClosestPlayer().transform);
             Attack();
         }
     }
 
-    public void SetAttackEnabled(bool enable){
-        attackEnabled = enable;
-    }
-
     public void SetTarget(Transform target){
         this.target = target;
-        Gun.GetComponent<GunController>().SetTarget(target);
+        foreach (GameObject gun in Guns)
+        {
+         gun.GetComponent<GunController>().SetTarget(target);  
+        }
     }
 
     public void GetSetAttackData(){
@@ -72,7 +76,10 @@ public class EnemyAttack : MonoBehaviour
     IEnumerator Attack1(){
         attackReady = false;
         for(int i=0;i<shootsPerAttack;i++){
-            Gun.GetComponent<GunController>().Shoot();
+            foreach (GameObject gun in Guns)
+            {
+                gun.GetComponent<GunController>().Shoot();  
+            }
             yield return shootCadency;
         }
         yield return shootCoolDown;
@@ -97,5 +104,13 @@ public class EnemyAttack : MonoBehaviour
             }
         }
         return closest;
+    }
+
+    public void SetLocalEnable(bool enable){
+        localEnable = enable; 
+        foreach (GameObject gun in Guns)
+        {
+         gun.SetActive(enable);
+        }
     }
 }

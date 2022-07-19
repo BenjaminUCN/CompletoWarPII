@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -14,14 +15,16 @@ public class Entity: MonoBehaviour
     public float moveSpeed = 5f;
     public float attackDamage = 1f;
 
-    public Color defaultColor;
+    private Color defaultColor;
     public Color hurtColor = new Color(1f, 0.30196078f, 0.30196078f);
     bool isHitted = false;
 
+    [SerializeField] private UnityEvent OnTakeDamage;
     //bool invulnerable = false;
     //float invulnerableTime = 0.2f;
 
     public virtual void takeDamage(float damage){
+        OnTakeDamage?.Invoke();
         gameObject.GetComponent<AudioSource>().Play();
         if(!isHitted){
             hp -= damage;

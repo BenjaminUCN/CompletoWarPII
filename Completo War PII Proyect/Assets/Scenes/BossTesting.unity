@@ -14610,6 +14610,7 @@ GameObject:
   - component: {fileID: 1767836087}
   - component: {fileID: 1767836086}
   - component: {fileID: 1767836093}
+  - component: {fileID: 1767836094}
   - component: {fileID: 1767836085}
   - component: {fileID: 1767836084}
   m_Layer: 0
@@ -14760,6 +14761,7 @@ MonoBehaviour:
   shootsPerAttack: 3
   cadencyTime: 0.3
   coolDownTime: 3
+  localEnable: 0
 --- !u!114 &1767836087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14804,12 +14806,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1dc8f774866d94f94941502949a9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 20
-  maxHp: 6
+  hp: 4
+  maxHp: 4
   moveSpeed: 5
   attackDamage: 1
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 1, g: 0.30196077, b: 0.30196077, a: 1}
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1767836094}
+        m_TargetAssemblyTypeName: PhaseController, Assembly-CSharp
+        m_MethodName: ChangeAnimatorController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   enemyAttack: {fileID: 0}
   enemyMovement: {fileID: 0}
   timesToRepeat: 1
@@ -14836,6 +14852,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1767836093}
         m_TargetAssemblyTypeName: MeleeAttack, Assembly-CSharp
+        m_MethodName: Initialize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1767836086}
+        m_TargetAssemblyTypeName: EnemyAttack, Assembly-CSharp
         m_MethodName: Initialize
         m_Mode: 1
         m_Arguments:
@@ -14876,10 +14904,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1767836086}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnRest:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1767836093}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1767836086}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -15018,6 +15070,47 @@ MonoBehaviour:
     m_Bits: 64
   damage: 1
   coolDownTime: 0.5
+  localEnable: 1
+--- !u!114 &1767836094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767836083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d68a9dabf0c1b4479cd8280af38da0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondController: {fileID: 22100000, guid: 51521bc628cf052439d023e4ff4132b8, type: 2}
+  OnChangePhase:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1767836093}
+        m_TargetAssemblyTypeName: MeleeAttack, Assembly-CSharp
+        m_MethodName: SetLocalEnable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1767836086}
+        m_TargetAssemblyTypeName: EnemyAttack, Assembly-CSharp
+        m_MethodName: SetLocalEnable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1904020279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15031,7 +15124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119226, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119227, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: GunData
@@ -15043,11 +15136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.4
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.z
