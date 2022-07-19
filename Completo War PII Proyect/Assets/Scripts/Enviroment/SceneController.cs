@@ -18,6 +18,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
+    public void VolverAMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu"){
             SceneManager.LoadScene("Menu");
