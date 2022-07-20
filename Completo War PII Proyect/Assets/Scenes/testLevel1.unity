@@ -180,13 +180,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec55c26c16c0e046ac60c092ae2941d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 0}
+  Guns: []
   target: {fileID: 0}
   attackData: {fileID: 0}
   attackRange: 100
   shootsPerAttack: 3
   cadencyTime: 0.3
   coolDownTime: 3
+  localEnable: 1
 --- !u!114 &21828459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +205,9 @@ MonoBehaviour:
   sightDistance: 100
   minimumFollowDistance: 64
   minimumRetreatDistance: 0
+  OnTurnDirection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &21828460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +224,10 @@ MonoBehaviour:
   maxHp: 20
   moveSpeed: 5
   attackDamage: 1
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 1, g: 0.30196077, b: 0.30196077, a: 1}
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
   enemyAttack: {fileID: 0}
   enemyMovement: {fileID: 0}
   timesToRepeat: 1
@@ -569,11 +575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 199.5
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 685
+      value: 654
       objectReference: {fileID: 0}
     - target: {fileID: 4046120109011119229, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -646,13 +652,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec55c26c16c0e046ac60c092ae2941d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 452619554}
+  Guns: []
   target: {fileID: 0}
   attackData: {fileID: 11400000, guid: 21dde6aafff032740ad22cf0652ffcd0, type: 2}
   attackRange: 100
   shootsPerAttack: 3
   cadencyTime: 0.3
   coolDownTime: 3
+  localEnable: 1
 --- !u!114 &315059103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +677,9 @@ MonoBehaviour:
   sightDistance: 400
   minimumFollowDistance: 300
   minimumRetreatDistance: 120
+  OnTurnDirection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &315059104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,8 +696,10 @@ MonoBehaviour:
   maxHp: 6
   moveSpeed: 32
   attackDamage: 1
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 0, g: 0, b: 0, a: 0}
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
   enemyAttack: {fileID: 0}
   enemyMovement: {fileID: 0}
   timesToRepeat: 1
@@ -1029,11 +1041,7 @@ MonoBehaviour:
     m_Bits: 64
   damage: 1
   coolDownTime: 0.5
---- !u!1 &452619554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4046120109011119226, guid: 974463c8fe63e184f98ea99a8c83f0c8, type: 3}
-  m_PrefabInstance: {fileID: 1671117568}
-  m_PrefabAsset: {fileID: 0}
+  localEnable: 1
 --- !u!1 &694277241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,11 +1324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225330, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 232.5
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225330, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1811.2
+      value: 549
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225330, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1538,6 +1546,7 @@ MonoBehaviour:
     m_Bits: 64
   damage: 1
   coolDownTime: 0.5
+  localEnable: 1
 --- !u!114 &1280052036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,13 +1559,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec55c26c16c0e046ac60c092ae2941d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gun: {fileID: 452619554}
+  Guns: []
   target: {fileID: 0}
   attackData: {fileID: 11400000, guid: 21dde6aafff032740ad22cf0652ffcd0, type: 2}
   attackRange: 100
   shootsPerAttack: 3
   cadencyTime: 0.3
   coolDownTime: 3
+  localEnable: 1
 --- !u!114 &1280052037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1584,9 @@ MonoBehaviour:
   sightDistance: 400
   minimumFollowDistance: 300
   minimumRetreatDistance: 120
+  OnTurnDirection:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1280052038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,8 +1603,10 @@ MonoBehaviour:
   maxHp: 6
   moveSpeed: 32
   attackDamage: 1
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hurtColor: {r: 0, g: 0, b: 0, a: 0}
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
   enemyAttack: {fileID: 0}
   enemyMovement: {fileID: 0}
   timesToRepeat: 1
@@ -7374,6 +7389,7 @@ MonoBehaviour:
     m_Bits: 64
   damage: 1
   coolDownTime: 0.5
+  localEnable: 1
 --- !u!212 &1860060987
 SpriteRenderer:
   m_ObjectHideFlags: 0
