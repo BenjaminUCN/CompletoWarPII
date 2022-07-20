@@ -15,6 +15,8 @@ public class InvokeAttack : MonoBehaviour
 
     private WaitForSeconds attackCoolDown;
 
+    [SerializeField] private AudioClip invokeClip;
+
     public KeyCode actionA = KeyCode.X;
 
     /*void Start(){
@@ -50,6 +52,7 @@ public class InvokeAttack : MonoBehaviour
 
     public void InvokeEnemies(){
         animator.SetTrigger("Attack");
+        GetComponent<AudioSource>().PlayOneShot(invokeClip, 0.7f);
 
         foreach (Vector3 point in spawnPoints)
         {

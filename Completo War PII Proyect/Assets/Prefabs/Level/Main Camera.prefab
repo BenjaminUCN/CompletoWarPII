@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6441922542841098742}
   - component: {fileID: 6441922542841098740}
   - component: {fileID: 6441922542841098743}
+  - component: {fileID: 1522139808861398407}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -103,3 +104,18 @@ MonoBehaviour:
   followThreshold: 32
   stopThreshold: 1
   speed: 128
+--- !u!114 &1522139808861398407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441922542841098741}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22518e56e9739df44ae1daf7222f6153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
+  scaleFactor: 1
