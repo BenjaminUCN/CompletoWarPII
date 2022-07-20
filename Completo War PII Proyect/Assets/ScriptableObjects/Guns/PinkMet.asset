@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f132415bdce57bd4bb378c4516b646b2, type: 3}
-  m_Name: PigLaser
+  m_Name: PinkMet
   m_EditorClassIdentifier: 
   attackDamage: 1
-  bulletSpeed: 200
-  gunSprite: {fileID: 0}
-  bulletSprite: {fileID: 21300000, guid: 6af0e52edfe73524ea89930828aaa1b9, type: 3}
-  bulletSound: {fileID: 8300000, guid: e502d17836933194cb954ae45b9ef656, type: 3}
+  bulletSpeed: 70
+  gunSprite: {fileID: 21300000, guid: 24102b78c09a4c34497891ea577ac0a4, type: 3}
+  bulletSprite: {fileID: 21300000, guid: b9640e37a7bb8f04ebb71a82145c881b, type: 3}
+  bulletSound: {fileID: 0}
   firePointPosition: {x: 0, y: 0, z: 0}

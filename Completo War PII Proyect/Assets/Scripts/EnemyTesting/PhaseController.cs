@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class PhaseController : MonoBehaviour
 {
     [SerializeField] private RuntimeAnimatorController secondController;
+    [SerializeField] private AudioClip transformation;
+    [SerializeField] private AudioClip hurtPhase2;
     private bool inPhase2 = false;
 
     [SerializeField] private UnityEvent OnChangePhase;
@@ -19,6 +21,8 @@ public class PhaseController : MonoBehaviour
             Animator animator = GetComponent<Animator>();
             animator.runtimeAnimatorController = secondController;
             animator.SetTrigger("Attack");
+            GetComponent<AudioSource>().PlayOneShot(transformation, 0.7f);
+            GetComponent<AudioSource>().clip = hurtPhase2;
         }
         
     }

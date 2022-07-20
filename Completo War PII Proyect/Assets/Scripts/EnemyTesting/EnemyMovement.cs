@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update(){
         SetTarget(FindClosestPlayer().transform);
-        if(movementEnabled){
+        if(localEnable){
             Move();
         }
     }
@@ -113,8 +113,11 @@ public class EnemyMovement : MonoBehaviour
 
     public void SetLocalEnable(bool enable){
         localEnable = enable;
-        //se queda quieto
-        animator.SetBool("IsMoving", false);
-        rb.velocity = new Vector2(0,0);
+        if(enable == false){
+            //se queda quieto
+            animator.SetBool("IsMoving", false);
+            rb.velocity = new Vector2(0,0);
+        }
+        
     }
 }

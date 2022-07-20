@@ -28,12 +28,16 @@ public class Teleporter : MonoBehaviour
 
     IEnumerator TeleportCoroutine(){
         ready = false;
+
         OnTeleportStart?.Invoke();
 
         GetComponent<Animator>().SetTrigger("Attack");
         yield return new WaitForSeconds(timing);
         RandomMove();
+        yield return new WaitForSeconds(timing);
+
         OnTeleportEnd?.Invoke();
+
         yield return new WaitForSeconds(coolDownTime);
         ready = true;
     }
