@@ -27,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
     private bool movementEnabled = true;
 
     [SerializeField] private UnityEvent OnTurnDirection;
+    [SerializeField]private bool localEnable = true;
 
     public void Initialize(){
         animator = gameObject.GetComponent<Animator>();
@@ -45,6 +46,12 @@ public class EnemyMovement : MonoBehaviour
         if(movementEnabled){
             Move();
         }
+    }
+
+    private void OnDisable() {
+        //se queda quieto
+        animator.SetBool("IsMoving", false);
+        rb.velocity = new Vector2(0,0);
     }
 
     public void SetMovementEnabled(bool enable){
@@ -102,5 +109,12 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         return closest;
+    }
+
+    public void SetLocalEnable(bool enable){
+        localEnable = enable;
+        //se queda quieto
+        animator.SetBool("IsMoving", false);
+        rb.velocity = new Vector2(0,0);
     }
 }
