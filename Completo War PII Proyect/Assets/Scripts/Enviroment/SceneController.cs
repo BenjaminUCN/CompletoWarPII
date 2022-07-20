@@ -22,6 +22,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Menu"){
             SceneManager.LoadScene("Menu");
