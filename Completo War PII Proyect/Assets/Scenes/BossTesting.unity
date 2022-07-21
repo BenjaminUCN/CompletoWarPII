@@ -17948,6 +17948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossCuesco
       objectReference: {fileID: 0}
+    - target: {fileID: 3275132629088562519, guid: 4970adff81962274da20238053ea8eae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3275132629088562520, guid: 4970adff81962274da20238053ea8eae, type: 3}
       propertyPath: m_RootOrder
       value: 19
