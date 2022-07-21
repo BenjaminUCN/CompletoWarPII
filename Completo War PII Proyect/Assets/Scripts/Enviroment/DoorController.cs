@@ -29,6 +29,8 @@ public class DoorController : MonoBehaviour
 
         //Si es el jugador quien la activó y la room no ha sido limpiada
         if(other.gameObject.name == "Player" && !room.clear){
+            //Activa los enemigos de la room
+            room.ActivateEnemies();
             //Cierra todas las puertas de la room
             room.CloseDoors();
         }

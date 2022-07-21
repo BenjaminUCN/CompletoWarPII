@@ -83,8 +83,7 @@ public class PlayerController : Entity
     }
 
     public override void Die(){
-        Debug.Log("you died");
-        //TODO
+        base.Die();
     }
 
     void Move(){

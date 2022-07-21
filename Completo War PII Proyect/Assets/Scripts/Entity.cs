@@ -23,10 +23,16 @@ public class Entity: MonoBehaviour
     //bool invulnerable = false;
     //float invulnerableTime = 0.2f;
 
+    [Header("Die: ")]
+    [SerializeField] private AudioClip defeatClip;
+    [SerializeField] private Sprite defeatedSprite;
+    [SerializeField] private GameObject defeatedPrefab;
+
     public virtual void takeDamage(float damage){
-        OnTakeDamage?.Invoke();
+        
         gameObject.GetComponent<AudioSource>().Play();
         if(!isHitted){
+            OnTakeDamage?.Invoke();
             hp -= damage;
             StartCoroutine(Invulnerability());
         }
@@ -55,6 +61,11 @@ public class Entity: MonoBehaviour
     }
 
     public virtual void Die(){
+        GameObject defeated = Instantiate(defeatedPrefab,transform.position,transform.rotation);
+        defeated.GetComponent<AudioSource>().clip = defeatClip;
+        defeated.GetComponent<AudioSource>().Play();
+        defeated.GetComponent<SpriteRenderer>().sprite = defeatedSprite;
+
         Destroy(gameObject);
     }
     /*

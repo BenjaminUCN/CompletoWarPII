@@ -23,10 +23,10 @@ public class EnemyScript : Entity
     [SerializeField] private UnityEvent OnAttack;
     [SerializeField] private UnityEvent OnRest;
 
-    [Header("Die: ")]
+    /*[Header("Die: ")]
     [SerializeField] private AudioClip defeatClip;
     [SerializeField] private Sprite defeatedSprite;
-    [SerializeField] private GameObject defeatedPrefab;
+    [SerializeField] private GameObject defeatedPrefab;*/
 
     private bool isReady = true;
     private WaitForSeconds waitMove, waitAttack, waitCoolDown;
@@ -70,10 +70,10 @@ public class EnemyScript : Entity
     }
 
     public override void Die(){
-        GameObject defeated = Instantiate(defeatedPrefab,transform.position,transform.rotation);
+        /*GameObject defeated = Instantiate(defeatedPrefab,transform.position,transform.rotation);
         defeated.GetComponent<AudioSource>().clip = defeatClip;
         defeated.GetComponent<AudioSource>().Play();
-        defeated.GetComponent<SpriteRenderer>().sprite = defeatedSprite;
+        defeated.GetComponent<SpriteRenderer>().sprite = defeatedSprite;*/
         //room.GetComponent<RoomController>().updateEnemyCount(-1);
         OnDie?.Invoke();//Para llamar a la room
         base.Die();  
