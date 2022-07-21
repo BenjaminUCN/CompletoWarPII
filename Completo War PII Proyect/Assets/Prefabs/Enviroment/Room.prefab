@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 0
   clear: 0
+  enemies: []
 --- !u!1001 &5097161261275433205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,7 +120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7206592757117631822, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: DoorTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 884e32900e871d045b49a0d0cba5bd04, type: 3}
