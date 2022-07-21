@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
 
     public void ChangeScene(string skin){
         StaticValuesController.skin = skin;
-        SceneManager.LoadScene("testLevel0");
+        SceneManager.LoadScene("lvl2Alpha");
     }
 
     public void EscenaPersonajes() {

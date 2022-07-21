@@ -27,6 +27,7 @@ public class EnemyScript : Entity
     [SerializeField] private AudioClip defeatClip;
     [SerializeField] private Sprite defeatedSprite;
     [SerializeField] private GameObject defeatedPrefab;*/
+    [SerializeField] private GameObject dropPrefab;
 
     private bool isReady = true;
     private WaitForSeconds waitMove, waitAttack, waitCoolDown;
@@ -75,8 +76,10 @@ public class EnemyScript : Entity
         defeated.GetComponent<AudioSource>().Play();
         defeated.GetComponent<SpriteRenderer>().sprite = defeatedSprite;*/
         //room.GetComponent<RoomController>().updateEnemyCount(-1);
+        base.Die();
         OnDie?.Invoke();//Para llamar a la room
-        base.Die();  
+        if(dropPrefab != null) Instantiate(dropPrefab,transform.position,transform.rotation);
+          
     }
 
     void SetupComponents(){
