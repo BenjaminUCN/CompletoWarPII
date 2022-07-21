@@ -249,8 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6855f253287245b6d359c5f755144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingPoints: 1
-  isHealingBoost: 0
+  healingPoints: 6
+  isHealingBoost: 1
+  pickClip: {fileID: 8300000, guid: 8035a73d9675aa0498c7b7df0c8a0526, type: 3}
 --- !u!61 &113979891
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,7 +262,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 2.08}
@@ -316,7 +317,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4546537308246297551, guid: 4721c22063a31634e9485705e09497d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -336,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113979888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.445038, y: 5.0246925, z: -748.5067}
+  m_LocalPosition: {x: 119.8, y: 73.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -427,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 866933926344461781, guid: b2862fcb652774a4586015c9259ca182, type: 3}
       propertyPath: m_Name
       value: AUDIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 866933926344461781, guid: b2862fcb652774a4586015c9259ca182, type: 3}
+      propertyPath: m_TagString
+      value: Audio
       objectReference: {fileID: 0}
     - target: {fileID: 866933926344461783, guid: b2862fcb652774a4586015c9259ca182, type: 3}
       propertyPath: m_RootOrder
@@ -17839,8 +17844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d6855f253287245b6d359c5f755144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingPoints: 1
+  healingPoints: 2
   isHealingBoost: 0
+  pickClip: {fileID: 8300000, guid: 8035a73d9675aa0498c7b7df0c8a0526, type: 3}
 --- !u!61 &1793109174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17851,7 +17857,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 2.08}
@@ -17906,7 +17912,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6740154126828488369, guid: b6858a41a3d121d439f3a757756679f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17926,7 +17932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793109171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.445038, y: 5.0246925, z: -748.5067}
+  m_LocalPosition: {x: -110.4, y: 31.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17985,7 +17991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225331, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: hp
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 817767479772225331, guid: d0b290db3edaaf54c91f345ad8cbf1e7, type: 3}
       propertyPath: maxHp
@@ -18197,7 +18203,7 @@ MonoBehaviour:
   - {fileID: 154592}
   - {fileID: 1614374745}
   - {fileID: 1083808019}
-  health: 6
+  health: 2
   maxHealth: 10
   OnDie:
     m_PersistentCalls:
