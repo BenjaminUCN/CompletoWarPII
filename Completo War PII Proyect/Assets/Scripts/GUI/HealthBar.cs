@@ -13,6 +13,10 @@ public class HealthBar : MonoBehaviour
 
     [SerializeField] private UnityEvent OnDie;
 
+    void Start(){
+        HealthBarFiller();
+    }
+
     bool DisplayHealthPoint(float _health, int pointNumber){
         return ( (pointNumber * 10) < _health);
     }
@@ -34,5 +38,13 @@ public class HealthBar : MonoBehaviour
         if (health <= 0) {
             OnDie?.Invoke();            
         }   
+    }
+
+    public void Heal(float healPoints){
+        if(health+healPoints <= maxHealth){
+            health += healPoints;
+            HealthBarFiller(); 
+        }
+         
     }
 }

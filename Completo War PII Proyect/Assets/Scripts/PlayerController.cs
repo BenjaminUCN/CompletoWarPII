@@ -14,6 +14,8 @@ public class PlayerController : Entity
     private Animator animator;
     private SpriteRenderer sprite;
 
+    public int currentMaxHealth = 6;
+
     [Space]
     [Header("Keys:")]
     public string playerType = "";
