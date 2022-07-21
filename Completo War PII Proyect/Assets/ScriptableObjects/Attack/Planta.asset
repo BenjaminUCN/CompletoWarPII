@@ -16,5 +16,5 @@ MonoBehaviour:
   shootsPerAttack: 3
   cadencyTime: 0.4
   coolDownTime: 2
-  bulletsPerShoot: 3
+  bulletsPerShoot: 6
   angle: 30

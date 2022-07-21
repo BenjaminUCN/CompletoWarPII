@@ -17,4 +17,4 @@ MonoBehaviour:
   gunSprite: {fileID: 21300000, guid: 6b950089480ee9e4aabe4cff4007b17f, type: 3}
   bulletSprite: {fileID: 21300000, guid: 7f6f15bd1db94a34aa035ad6221471cc, type: 3}
   bulletSound: {fileID: 8300000, guid: 35c09882e54b38540b7be58b580e94fa, type: 3}
-  firePointPosition: {x: 0, y: 0, z: 0}
+  firePointPosition: {x: -23, y: 0, z: 0}
