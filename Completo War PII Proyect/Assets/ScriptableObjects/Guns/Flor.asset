@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f132415bdce57bd4bb378c4516b646b2, type: 3}
-  m_Name: PinkMet
+  m_Name: Flor
   m_EditorClassIdentifier: 
   attackDamage: 1
-  bulletSpeed: 124
-  gunSprite: {fileID: 21300000, guid: 24102b78c09a4c34497891ea577ac0a4, type: 3}
-  bulletSprite: {fileID: 21300000, guid: b9640e37a7bb8f04ebb71a82145c881b, type: 3}
-  bulletSound: {fileID: 8300000, guid: 4d08fd38ea00df440856a2d6f2c7c51f, type: 3}
+  bulletSpeed: 250
+  gunSprite: {fileID: 21300000, guid: 6b950089480ee9e4aabe4cff4007b17f, type: 3}
+  bulletSprite: {fileID: 21300000, guid: 7f6f15bd1db94a34aa035ad6221471cc, type: 3}
+  bulletSound: {fileID: 8300000, guid: 35c09882e54b38540b7be58b580e94fa, type: 3}
   firePointPosition: {x: 0, y: 0, z: 0}

@@ -78,7 +78,8 @@ public class EnemyAttack : MonoBehaviour
         for(int i=0;i<shootsPerAttack;i++){
             foreach (GameObject gun in Guns)
             {
-                gun.GetComponent<GunController>().Shoot();  
+                //gun.GetComponent<GunController>().Shoot();  
+                gun.GetComponent<GunController>().Shoot2(attackData.bulletsPerShoot, attackData.angle);
             }
             yield return shootCadency;
         }

@@ -7,4 +7,6 @@ public class AttackScriptableObject : ScriptableObject
     public int shootsPerAttack = 3;
     public float cadencyTime = 0.3f;
     public float coolDownTime = 3f;
+    public int bulletsPerShoot = 1;
+    public float angle = 0f;
 }
