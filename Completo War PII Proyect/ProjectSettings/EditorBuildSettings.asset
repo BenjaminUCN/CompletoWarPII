@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvl2Alpha.unity
     guid: 42610a70aa8e1ac4c9d144490855aa85
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lvl3alpha.unity
     guid: b993fbcbcf7febe49afa57cf184fc895
   - enabled: 1
