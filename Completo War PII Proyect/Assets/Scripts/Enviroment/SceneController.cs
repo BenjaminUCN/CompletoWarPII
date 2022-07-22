@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {   
 
+    public void CargarLVL3()
+    {
+        SceneManager.LoadScene("lvl3alpha");
+    }
     
 
     public void ChangeScene(string skin){
